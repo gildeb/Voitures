@@ -1,4 +1,4 @@
 # Introduction
 Adapatation de la voiture 2 roues Anumby 2021 à la télécommande infrarouge.
 # Schema electrique
-![wiring](./images/wiring.png)
+![wiring](Robot Jerome.png)
