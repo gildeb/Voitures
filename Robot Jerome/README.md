@@ -17,4 +17,4 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 - __2 résistances__
 
 # Schema electrique
-![](./Robot_Jerome.png)
+![](./Robot_Jerome_2.png)
