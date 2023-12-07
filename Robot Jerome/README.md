@@ -13,6 +13,7 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 - __diode IR TL1838__ : https://fr.aliexpress.com/item/4000610270256.html?spm=a2g0o.order_list.order_list_main.114.5f2c5e5bFkj0JY&gatewayAdapt=glo2fra
 - __diode neopixel__
 - __cellules photovoltaïques__
+- __telecommande IR__ : https://fr.aliexpress.com/item/1005005880586343.html?spm=a2g0o.order_list.order_list_main.5.50145e5bUaWUCF&gatewayAdapt=glo2fra
 
 # Schema electrique
 ![](./Robot_Jerome.png)
