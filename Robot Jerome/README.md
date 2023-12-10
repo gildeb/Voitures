@@ -37,4 +37,6 @@ Après le reboot de la carte, attendre quelques secondes que le capteur ultrason
 
 ![](./telecommande.png)
 
+Avant le lancer l'équilibrage de luminosoté des cellules, il faut s'assurer qu'elles reçoivent le même éclairement. Pour cela, placer à quelques centimètres devant une feuille de papier blanc éclairée uniformément, puis lancer l'équilibrage. Le robot passe ensuite automatiquement en mode __suivi__.
+
 
