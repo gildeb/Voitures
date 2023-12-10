@@ -34,3 +34,7 @@ Avant de lancer la compilation, selectionner la carte __NodeMCU 0.9__ (ou (1.0).
 
 # Fonctionnement
 Après le reboot de la carte, attendre quelques secondes que le capteur ultrason initialise la distance. Le robot demarre en mode __manuel__ (diode neopixel rouge).
+
+![](./telecommande.png)
+
+
