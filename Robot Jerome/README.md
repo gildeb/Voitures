@@ -17,7 +17,7 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 - __2 résistances de 1k ou 10 k__
 
 ## Schema electrique
-![](./Robot_Jerome.png)
+!(./Robot_Jerome.png)
 
 Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
 
