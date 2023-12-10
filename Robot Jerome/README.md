@@ -24,4 +24,5 @@ Dans le répertoire Arduino, créer un répertoire __robot__ et copier tous les 
 
 Si ce n'est pas le cas:
 - dans le fichier __preferences__, ajouter le lien http://arduino.esp8266.com/stable/package_esp8266com_index.json à la liste des cartes additionnelles
-- dans le menu __board manager__ (sous l'onglet __outils__), recherchere esp8266 et charger la librairie correspondante
+- dans le menu __Gestionnaire de Cartes__ (sous l'onglet __Outils__), rechercher esp8266 et charger la librairie correspondante
+
