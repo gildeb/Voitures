@@ -23,6 +23,7 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 Dans le répertoire Arduino, créer un répertoire __robot__ et copier tous les fichiers ci-dessus (sauf les images .png). Il faut s'assurer que l'esp8266 est reconnue par l'IDE. 
 
 Si ce n'est pas le cas:
-- dans le fichier __preferences__, ajouter le lien http://arduino.esp8266.com/stable/package_esp8266com_index.json à la liste des cartes additionnelles
-- dans le menu __Gestionnaire de Cartes__ (sous l'onglet __Outils__), rechercher esp8266 et charger la librairie correspondante
+- dans le fichier __preferences__, ajouter le lien http://arduino.esp8266.com/stable/package_esp8266com_index.json à la liste des cartes additionnelles,
+- dans le menu __Gestionnaire de Cartes__ (sous l'onglet __Outils__), rechercher esp8266 et charger la librairie correspondante.
 
+Avant de lancer la compilation, selectionner la carte __NodeMCU 0.9__ (ou (1.0). Il est possible de choisir __Generic ESP8266 Module__ mais dans ce cas, les pins D0,... D8 ne seront pas définies et il faut les remplacer par les GPIOs correspondantes dans les fichiers .ino, et .h (D0=
