@@ -30,4 +30,7 @@ Si ce n'est pas le cas:
 - dans le fichier __preferences__, ajouter le lien http://arduino.esp8266.com/stable/package_esp8266com_index.json à la liste des cartes additionnelles,
 - dans le menu __Gestionnaire de Cartes__ (sous l'onglet __Outils__), rechercher esp8266 et charger la librairie correspondante.
 
-Avant de lancer la compilation, selectionner la carte __NodeMCU 0.9__ (ou (1.0). Il est possible de choisir __Generic ESP8266 Module__ mais dans ce cas, les pins D0,... D8 ne seront pas définies et il faut les remplacer par les GPIOs correspondantes dans les fichiers .ino, et .h (D0=16, D1=4, ...).
+Avant de lancer la compilation, selectionner la carte __NodeMCU 0.9__ (ou (1.0). Il est à priori possible de choisir __Generic ESP8266 Module__ (non testé) mais dans ce cas, les pins D0,... D8 ne seront pas définies et il faut les remplacer par les GPIOs correspondantes dans les fichiers .ino, et .h (D0=16, D1=4, ...).
+
+# Fonctionnement
+Après le reboot de la carte, attendre quelques secondes que le capteur ultrason initialise la distance. Le robot demarre en mode __manuel__ (diode neopixel rouge).
