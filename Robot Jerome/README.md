@@ -20,7 +20,7 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 ![](./Robot_Jerome.png)
 
 # Compilation et chargement du firmware (IDE Arduino)
-Dans le répertoire Arduino, créer un répertoire __robot__ et copier tous les fichiers ci-dessus (sauf les images .pgn). Il faut s'assurer que l'esp8266 est reconnue par l'IDE. 
+Dans le répertoire Arduino, créer un répertoire __robot__ et copier tous les fichiers ci-dessus (sauf les images .png). Il faut s'assurer que l'esp8266 est reconnue par l'IDE. 
 
 Si ce n'est pas le cas:
 - dans le fichier __preferences__, ajouter le lien http://arduino.esp8266.com/stable/package_esp8266com_index.json à la liste des cartes additionnelles
