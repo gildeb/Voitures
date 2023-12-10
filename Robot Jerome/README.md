@@ -18,9 +18,10 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 
 # Schema electrique
 ![](./Robot_Jerome.png)
+
 Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
 
-La batterie alimente à la fois l'ESP8266 et le driver L293D. Ne pas dépasser 9V (2 accus Li-ion en série conviennent). 
+La batterie alimente à la fois l'ESP8266 et le driver L293D. Ne pas dépasser 9V (2 accus Li-ion en série conviennent). __Attention__ à ne pas oublier le strap (voir schéma).
 
 # Compilation et chargement du firmware (IDE Arduino)
 Dans le répertoire Arduino, créer un répertoire __robot__ et copier tous les fichiers ci-dessus (sauf les images .png). Il faut s'assurer que l'esp8266 est reconnue par l'IDE. 
