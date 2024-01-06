@@ -17,7 +17,9 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 - __2 résistances de 1k ou 10 k__
 
 ## Schema electrique
-![](./Robot_Jerome.png)
+<p align="center">
+  <img src="./Robot_Jerome.png" width="600">
+<p/>
 
 Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
 
@@ -35,7 +37,9 @@ Avant de lancer la compilation, selectionner la carte __NodeMCU 0.9__ (ou (1.0).
 ## Fonctionnement
 Après le reboot de la carte, attendre quelques secondes que le capteur ultrason initialise la distance. Le robot demarre en mode __manuel__ (diode neopixel rouge).
 
-![](./telecommande.png)
+<p align="center">
+  <img src="./telecommande.png" width="500">
+<p/>
 
 Avant le lancer l'équilibrage de luminosité des cellules, il faut s'assurer qu'elles reçoivent le même éclairement. Pour cela, placer à quelques centimètres devant une feuille de papier blanc éclairée uniformément, puis lancer l'équilibrage. Le robot passe ensuite automatiquement en mode __suivi__.
 
