@@ -18,7 +18,7 @@ Ce projet est une adapatation de la voiture 2 roues Anumby 2021 dans laquelle la
 
 ## Schema electrique
 <p align="center">
-  <img src="./Robot_Jerome.png" width="600">
+  <img src="./Robot Jerome.png" width="600">
 <p/>
 
 Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
