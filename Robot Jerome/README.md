@@ -25,6 +25,8 @@ Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
 
 La batterie alimente à la fois l'ESP8266 et le driver L293D. Ne pas dépasser 9V : destruction de l'ESP8266 (2 accus Li-ion en série conviennent). __Attention__ à ne pas oublier le jumper (voir schéma).
 
+La rangée de pins Vcc du shield est à 3,3V.
+
 ## Compilation et chargement du firmware (IDE Arduino)
 Dans le répertoire Arduino, créer un répertoire __robot__ et copier tous les fichiers ci-dessus (sauf les images .png). Il faut s'assurer que l'esp8266 est reconnu par l'IDE. 
 
