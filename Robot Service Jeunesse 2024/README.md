@@ -3,12 +3,12 @@ vers un ordinateur fixe dans le but d'effectuer une reconnaissance d'image à l'
 d'intelligence artificielle.
 
 ## Liste de materiel:
-- __D1 Mini (ESP8266)__ :
-- __driver moteur L293D__ : 
-- __ESP32-cam__
+- __D1 Mini (ESP8266)__ : https://fr.aliexpress.com/item/32659028315.html?spm=a2g0o.order_list.order_list_main.51.5f2c5e5bFkj0JY&gatewayAdapt=glo2fra
+- __driver moteur L293D__ : https://www.gotronic.fr/art-l293d-14072.htm
+- __ESP32-cam__ : 
 - __diode IR TL1838__ (ou équivalent): https://fr.aliexpress.com/item/4000610270256.html?spm=a2g0o.order_list.order_list_main.114.5f2c5e5bFkj0JY&gatewayAdapt=glo2fra
-- __diode neopixel__
-- __diode schottky__ : 
+- __diode neopixel__ : https://www.gotronic.fr/art-5-leds-rgb-5mm-neopixel-ada1938-22883.htm
+- __diode schottky__ : https://www.gotronic.fr/art-1n5819-104.htm
 - __telecommande IR__ : https://fr.aliexpress.com/item/1005005880586343.html?spm=a2g0o.order_list.order_list_main.5.50145e5bUaWUCF&gatewayAdapt=glo2fra
 
 ## Schema electrique
