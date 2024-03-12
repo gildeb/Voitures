@@ -45,4 +45,6 @@ Après le reboot de la carte, attendre quelques secondes que le capteur ultrason
 
 Avant le lancer l'équilibrage de luminosité des cellules, il faut s'assurer qu'elles reçoivent le même éclairement. Pour cela, placer à quelques centimètres devant une feuille de papier blanc éclairée uniformément, puis lancer l'équilibrage. Le robot passe ensuite automatiquement en mode __suivi__.
 
+La voiture possède une boite de vitesse à 3 rapports. Au demarrage (après le boot), le rapport le plus lent est enclenché. Les touches + et - de la télécommande permettent de changer le rapport de transmission. Cette modification n'est effective qu'après arrêt et redémarrage des moteurs.
+
 
