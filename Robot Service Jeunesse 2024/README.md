@@ -3,17 +3,17 @@ vers un ordinateur fixe dans le but d'effectuer une reconnaissance d'image à l'
 d'intelligence artificielle.
 
 ## Liste de materiel:
-- __D1 Mini (ESP8266)__ : https://fr.aliexpress.com/item/32659028315.html?spm=a2g0o.order_list.order_list_main.51.5f2c5e5bFkj0JY&gatewayAdapt=glo2fra
+- __D1 Mini (ESP8266)__ : (aliexpress)
 - __driver moteur L293D__ : https://www.gotronic.fr/art-l293d-14072.htm
-- __ESP32-cam__ : 
+- __ESP32-cam__ :  (aliexpress)
 - __diode IR TL1838__ (ou équivalent): https://fr.aliexpress.com/item/4000610270256.html?spm=a2g0o.order_list.order_list_main.114.5f2c5e5bFkj0JY&gatewayAdapt=glo2fra
 - __diode neopixel__ : https://www.gotronic.fr/art-5-leds-rgb-5mm-neopixel-ada1938-22883.htm
 - __diode schottky__ : https://www.gotronic.fr/art-1n5819-104.htm
-- __telecommande IR__ : https://fr.aliexpress.com/item/1005005880586343.html?spm=a2g0o.order_list.order_list_main.5.50145e5bUaWUCF&gatewayAdapt=glo2fra
+- __telecommande IR H713__ : (aliexpress)
 
 ## Schema electrique
 <p align="center">
-  <img src="./Robot Jerome.png" width="600">
+  <img src="./Schema electrique.png" width="600">
 <p/>
 
 Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
