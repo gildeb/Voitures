@@ -21,3 +21,7 @@ Le circuit électrique utilise deux microcontroleurs :
 - un ESP32-cam pour la capture des images.
 
 Ils sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
+
+<p align="center">
+  <img src="./RSJ implantation.png" width="600">
+<p/>
