@@ -3,7 +3,7 @@ vers un ordinateur fixe dans le but d'effectuer une reconnaissance d'image à l'
 d'intelligence artificielle.
 
 ## Liste de materiel:
-- __D1 Mini__ :
+- __D1 Mini (ESP8266)__ :
 - __driver moteur L293D__ : 
 - __ESP32-cam__
 - __diode IR TL1838__ (ou équivalent): https://fr.aliexpress.com/item/4000610270256.html?spm=a2g0o.order_list.order_list_main.114.5f2c5e5bFkj0JY&gatewayAdapt=glo2fra
