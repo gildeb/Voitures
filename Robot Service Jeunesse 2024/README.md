@@ -16,8 +16,8 @@ d'intelligence artificielle.
   <img src="./Schema electrique.png" width="600">
 <p/>
 
-Il faut, bien sûr ajouter l'ESP8266 qui ne figure pas sur le schéma.
+Le circuit électrique utilise deux microcontroleurs : 
+- un ESP8266 (D1 Mini) pour la réception du signal infre-rougen et la commande des moteurs,
+- un ESP32-cam pour la capture des images.
 
-La batterie alimente à la fois l'ESP8266 et le driver L293D. Ne pas dépasser 9V : destruction de l'ESP8266 (2 accus Li-ion en série conviennent). __Attention__ à ne pas oublier le jumper (voir schéma).
-
-La rangée de pins Vcc du shield est à 3,3V.
+Ils sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
