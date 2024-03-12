@@ -17,7 +17,7 @@ d'intelligence artificielle.
 <p/>
 
 Le circuit électrique utilise deux microcontroleurs : 
-- un ESP8266 (D1 Mini) pour la réception du signal infre-rougen et la commande des moteurs,
+- un ESP8266 (D1 Mini) pour la réception du signal infra-rouge et la commande des moteurs,
 - un ESP32-cam pour la capture des images.
 
 Ils sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
