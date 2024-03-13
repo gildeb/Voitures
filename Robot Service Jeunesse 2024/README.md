@@ -25,3 +25,10 @@ Ils sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 
 <p align="center">
   <img src="./RSJ_implantation.png" width="400">
 <p/>
+
+## Firmwares pour le D1 mini et pour l'ESP32-cam
+
+Voir les dossiers correspondants
+
+## Fonctionnement
+
