@@ -21,7 +21,12 @@ Le circuit électrique utilise deux microcontroleurs :
 - un ESP32-cam pour la capture des images. __Attention__ : l'objectif de la caméra étant tourné vers le sol, les broches de l'ESP32-cam doivent être inversées, c'est à
   dire placées du côté caméra et non du côté carte SD (photo ci-dessous).
 
-Ils sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
+<p align="center">
+  <img src="./ESP32-cam.png" width="400">
+  <img src="./ESP32-cam inversee.png" width="400">
+<p/>
+  
+Les deux microcontrolleurs sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
 
 <p align="center">
   <img src="./RSJ_implantation.png" width="400">
