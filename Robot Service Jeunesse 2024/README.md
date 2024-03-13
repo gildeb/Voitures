@@ -10,6 +10,7 @@ d'intelligence artificielle.
 - __diode neopixel__ : https://www.gotronic.fr/art-5-leds-rgb-5mm-neopixel-ada1938-22883.htm
 - __diode schottky__ : https://www.gotronic.fr/art-1n5819-104.htm
 - __telecommande IR H713__ : (aliexpress)
+- __convertisseur USB-série__ (téléchargement du firmware de __l'ESP32-cam__ : https://www.az-delivery.de/fr/products/usb-ttl-adapter-3-3v-oder-5v-mit-ch340g-und-20cm-jumperkabel?variant=32923045101664
 
 ## Schema electrique
 <p align="center">
