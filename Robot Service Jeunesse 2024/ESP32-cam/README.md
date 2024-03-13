@@ -7,5 +7,5 @@ Avant de lancer la compilation, sélectionner la carte __AI Thinker ESP32-CAM__ 
 Pour le téléchargement du code, il faut utiliser un convertisseur USB-série :
 
 <p align="center">
-  <img src="./branchement convertisseur.png" width="400">
+  <img src="./branchement convertisseur.png" width="500">
 <p/>
