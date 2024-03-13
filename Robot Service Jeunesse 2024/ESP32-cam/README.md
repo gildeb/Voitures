@@ -4,4 +4,8 @@ Dans le répertoire Arduino, créer un dossier __ESP32-cam__ et copier dans ce d
 
 Avant de lancer la compilation, sélectionner la carte __AI Thinker ESP32-CAM__ (menu _tools>board_).
 
-Pour le téléchargement du code, il faut utiliser un convertisseur USB-série
+Pour le téléchargement du code, il faut utiliser un convertisseur USB-série :
+
+<p align="center">
+  <img src="./branchement convertisseur.png" width="600">
+<p/>
