@@ -9,3 +9,5 @@ Pour le téléchargement du code, il faut utiliser un convertisseur USB-série :
 <p align="center">
   <img src="./branchement convertisseur.png" width="500">
 <p/>
+
+__ATTENTION__ : ne pas oublier de connecter la GPIO0 avec la masse pendant le téléchargement. Supprimer cette connexion une fois le téléchargement terminé.
