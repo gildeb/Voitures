@@ -23,7 +23,7 @@ Le circuit électrique utilise deux microcontroleurs :
 
 <p align="center">
   <img src="./ESP32-cam.png" width="400">
-  <img src="./ESP32-cam inversee.png" width="400">
+  <img src="./ESP32-cam inversee.png" width="410">
 <p/>
   
 Les deux microcontrolleurs sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
