@@ -36,5 +36,9 @@ Les deux microcontrolleurs sont alimentés en 5V par la même source : 4 piles 1
 
 Voir les dossiers correspondants
 
-## Fonctionnement
+## Fonctionnement de la télécommande
+
+<p align="center">
+  <img src="./telecommande.png" width="500">
+<p/>
 
