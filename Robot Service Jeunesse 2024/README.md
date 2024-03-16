@@ -30,7 +30,7 @@ Le circuit électrique utilise deux microcontroleurs :
 Les deux microcontrolleurs sont alimentés en 5V par la même source : 4 piles 1,5V ou 4 accus NiMh de 1,2V.
 
 <p align="center">
-  <img src="./RSJ_implantation-V3.svg" width="400">
+  <img src="./RSJ_implantation-V3.png" width="400">
 <p/>
 
 ## Firmwares pour le D1 mini et pour l'ESP32-cam
