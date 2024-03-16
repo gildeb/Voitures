@@ -67,13 +67,13 @@ const int ARRET  = 0x1FE817E;  //bouton ARRET,           arrêt des moteurs, DCG
 const int ACCELG = 0x1FEE11E;  //bouton VOL+,            le DC du moteur G est augmenté de 1; pour améliorer la rectitude de la trajectoire
 const int FREING = 0x1FE916E;  //bouton VOL-,            le DC du moteur G est diminué de 1;  pour améliorer la rectitude de la trajectoire
 const int AVT1   = 0x1FE1CE3;  //bouton HAUT, 			     marche avant avec DCG et DCD à leur valeur courante
-const int ARR1   = 0x1FE02FD;  //bouton BAS, 			       marche arr à Vmini (DC= 700) permanente
+const int ARR1   = 0x1FE02FD;  //bouton BAS, 			       marche arr à Vmini (DC=800) permanente
 const int VIREG  = 0x1FEEC13;  //bouton GAUCHE,          le DC du moteur G est diminué de 10 pendant 1s; pour tourner à gauche pendant 1s
 const int VIRED  = 0x1FE9C63;  //bouton DROITE,          le DC du moteur D est diminué de 10 pendant 1s; pour tourner à droite pendant 1s
 const int PAGE   = 0x1FEC13E;  //bouton PAGE,			       marche avant à Vmini pendant 1000ms puis arret des moteurs
 const int HOME   = 0x1FECE31;  //bouton HOME,			       marche avant à Vmini pendant 200ms puis arret des moteurs
 const int OKOK   = 0x1FEC837;  //bouton OK,			         arret des moteurs, DCG et DCD inchangés
-const int RETOUR = 0x1FEE41B;  //bouton RETOUR,			     mettre DCG et DCD à 700
+const int RETOUR = 0x1FEE41B;  //bouton RETOUR,			     mettre DCG et DCD à 800
 const int SOURIS = 0x1FE12ED;  //bouton SOURIS,          envoyer à ESP32CAM une commande activation caméra pendant 10s
 
 //
@@ -94,8 +94,8 @@ void translateIR() // Fonction reliant le signal à la fonction associée
 switch(results.value)
   {
   case ARRET: Serial.println("POWER         arrêt des moteurs avec mise à 0 des DCG et DCD"); // arrêt par la mise à 0 des variables DCG et DCD
-    DCG= 0;
-    DCD= 0;
+    DCG = 0;
+    DCD = 0;
     analogWrite(EnaD, DCD);         //  enaD  ENA
     analogWrite(EnaG, DCG);         //  enaG  ENB
     digitalWrite(fwdD, HIGH);       //  fwdD  IN1
@@ -121,7 +121,7 @@ switch(results.value)
 
   case VIREG: Serial.println("GAUCHE   VIREG"); //rotation à gauche pendant 150ms
     analogWrite(EnaG, 0);           //  enaG  ENA  motG à 0
-    analogWrite(EnaD, 700);         //  enaD  ENB  rotation motD à 700
+    analogWrite(EnaD, 800);         //  enaD  ENB  rotation motD à 800
     digitalWrite(fwdG, HIGH);       //  fwdG  IN1
     digitalWrite(bwdG, LOW);        //  bwdG  IN2
     digitalWrite(fwdD, HIGH);       //  fwdD  IN3  
@@ -132,7 +132,7 @@ switch(results.value)
     break;
   
   case VIRED: Serial.println("DROITE   VIRED" ); //rotation à droite pendant 150ms
-    analogWrite(EnaG, 700);         //  enaG  ENA   rotation motG à 700
+    analogWrite(EnaG, 800);         //  enaG  ENA   rotation motG à 800
     analogWrite(EnaD, 0);           //  enaD  ENB   motD à 0
     digitalWrite(fwdG, HIGH);       //  fwdG  IN1
     digitalWrite(bwdG, LOW);        //  bwdG  IN2
@@ -143,9 +143,9 @@ switch(results.value)
     analogWrite(EnaD, DCD);         //  enaD  ENB   motD à DCD
     break;
     
-  case AVT1: Serial.println("HAUT            AVT1"); //  marche avant permanente avec DCG et DCD à 700
-    DCG= 700;
-    DCD= 700;
+  case AVT1: Serial.println("HAUT            AVT1"); //  marche avant permanente avec DCG et DCD à 800
+    DCG = 800;
+    DCD = 800;
     analogWrite(EnaG, DCG);         //  enaG  ENA avance
     analogWrite(EnaD, DCD);         //  enaD  ENB avance
     Serial.println(DCG);
@@ -156,9 +156,9 @@ switch(results.value)
     delay(5);
     break;
     
-  case ARR1: Serial.println("BAS            ARR1"); // marche arrière permanente avec DCG et DCD à 700
-    DCG= 700;
-    DCD= 700;
+  case ARR1: Serial.println("BAS            ARR1"); // marche arrière permanente avec DCG et DCD à 800
+    DCG = 800;
+    DCD = 800;
     analogWrite(EnaG, DCG);         //  enaG  ENA arrière à DCG
     analogWrite(EnaD, DCD);         //  enaD  ENB arrière à DCD
     digitalWrite(fwdG, LOW);         //  fwdG  IN1
@@ -196,8 +196,8 @@ switch(results.value)
   break;
 
   case OKOK: Serial.println("OK       arrêt des moteurs avec mise à 0 de DCG etDCD"); // arret des 2 moteurs, même fonction que le bouton rouge POWER 
-    DCG= 0;
-    DCD= 0;
+    DCG = 0;
+    DCD = 0;
     analogWrite(EnaG, DCG);         //  enaG  ENA
     analogWrite(EnaD, DCD);         //  enaD  ENB
     digitalWrite(fwdG, HIGH);       //  fwdG  IN1
@@ -207,15 +207,15 @@ switch(results.value)
     delay(5);
     break;
   
-  case RETOUR: Serial.println("RETOUR         initialisation de DCG et DCD à 700"); // mettre DCG et DCD à 700
-  DCG=700;
-  DCD=700;
+  case RETOUR: Serial.println("RETOUR         initialisation de DCG et DCD à 800"); // mettre DCG et DCD à 800
+  DCG = 800;
+  DCD = 800;
   break;
 
   case SOURIS: Serial.println("SOURIS         activation CAM"); // envoie pendant 10s une commande d'activation camera 
-    digitalWrite(cam, HIGH);
+    digitalWrite(cam, LOW);          // Allumage
     delay(10000);
-    digitalWrite(cam, LOW);
+    digitalWrite(cam, HIGH);         // Extinction
   break;
 
   default:
@@ -244,6 +244,8 @@ void setup() {
   pinMode(fwdD, OUTPUT);
   pinMode(bwdD, OUTPUT);
   pinMode(cam,  OUTPUT);
+  //Extinction de la LED de l'ESP32-cam
+  digitalWrite(cam, HIGH);
 }
 
 void loop() // Boucle qui s'éxécute à l'infini
