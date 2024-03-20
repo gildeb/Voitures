@@ -83,7 +83,8 @@ const size_t n = sizeof(pins) / sizeof(int);
 int DCG; //Duty Cycle du moteur Gauche
 int DCD; //Duty Cycle du moteur Droit
 
-const int ledPin = 2; 
+const int ledPin = 2;
+bool flash = false;
 
 const int range = 1000;
 const int freq = 1000; // 100 .. 40000
@@ -213,9 +214,15 @@ switch(results.value)
   break;
 
   case SOURIS: Serial.println("SOURIS         activation CAM"); // envoie pendant 10s une commande d'activation camera 
-    digitalWrite(cam, LOW);          // Allumage
-    delay(10000);
-    digitalWrite(cam, HIGH);         // Extinction
+    if (!flash){
+      digitalWrite(cam, HIGH);          // Allumage
+      flash = true;
+    }else{
+      digitalWrite(cam, LOW);         // Extinction
+      flash = false;
+    }
+    //delay(10000);
+    
   break;
 
   default:
@@ -245,7 +252,7 @@ void setup() {
   pinMode(bwdD, OUTPUT);
   pinMode(cam,  OUTPUT);
   //Extinction de la LED de l'ESP32-cam
-  digitalWrite(cam, HIGH);
+  digitalWrite(cam, LOW);
 }
 
 void loop() // Boucle qui s'éxécute à l'infini
