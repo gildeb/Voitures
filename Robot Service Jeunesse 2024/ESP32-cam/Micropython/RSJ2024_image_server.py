@@ -1,3 +1,10 @@
+######################################################################
+#
+#   Après démarrage du serveur, lancer Mastermind-Micropython.py
+#   sur le PC et le connecter au réseau ESP32-cam-x (x=robot_no)
+#
+######################################################################
+
 import network, socket
 from machine import Pin, reset
 import camera
