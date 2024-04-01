@@ -1,5 +1,5 @@
 import network, socket
-from machine import Pin, SoftI2C, reset
+from machine import Pin, reset
 import camera
 from neopixel import NeoPixel
 from time import sleep_ms
@@ -9,7 +9,7 @@ color_dict = {  b'GREEN':(255, 0, 0)
          , b'BLUE' :(0, 0, 255)
          , b'BLACK':(0, 0, 0)
            }
-count = 0
+# count = 0
 # camera initialization
 camera.init(0, format=camera.JPEG, fb_location=camera.PSRAM)
 # camera.framesize(camera.FRAME_QVGA)    # 320x240
@@ -21,7 +21,6 @@ np = NeoPixel(Pin(12), 1)
 np[0] = color_dict[b'BLACK']
 np.write()
 #
-p2 = Pin(2, Pin.IN)
 onboard_led = Pin(4)
 #
 led = Pin(4, Pin.OUT)
