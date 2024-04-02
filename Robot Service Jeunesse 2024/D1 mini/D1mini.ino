@@ -11,11 +11,17 @@
 
 #define robot_nb 1 // numero robot
 
+#if (robot_nb % 2 == 1)
+   #include "telecommande_1.h" 
+#else
+   #include "telecommande_2.h"
+#endif
+
 const int receiverPin = 13; // Broche du récepteur IR
 IRrecv irrecv(receiverPin);
 decode_results results;
 
-//définitions des paramètres moteur et commande ESP CAM
+//définitions des paramètres moteur et commande de l'ESP32-cam
 const int EnaD   = 5;    // enable du moteur Gauche=GPIO5
 const int EnaG   = 14;   // enable du moteur Droit
 const int fwdD   = 4;    // forward du moteur Gauche
@@ -25,29 +31,9 @@ const int bwdG   = 15;   // backward du moteur Droit
 const int cam    = 2;    // activation de la caméra
 const int ledPin = 2;  // board led
 
-/* définitions des commandes générées par une TCD IR, les codes en hexa associés sont spécifiques à une TCD
-const int ARRET  = 0x1FE817E;  //bouton ARRET,           arrêt des moteurs, DCG et DCD à 0:  pour stopper le véhicule
-const int ACCELG = 0x1FEE11E;  //bouton VOL+,            le DC du moteur G est augmenté de 1; pour améliorer la rectitude de la trajectoire
-const int FREING = 0x1FE916E;  //bouton VOL-,            le DC du moteur G est diminué de 1;  pour améliorer la rectitude de la trajectoire
-const int AVT1   = 0x1FE1CE3;  //bouton HAUT, 			     marche avant avec DCG et DCD à leur valeur courante
-const int ARR1   = 0x1FE02FD;  //bouton BAS, 			       marche arr à Vmini (DC=800) permanente
-const int VIREG  = 0x1FEEC13;  //bouton GAUCHE,          le DC du moteur G est diminué de 10 pendant 1s; pour tourner à gauche pendant 1s
-const int VIRED  = 0x1FE9C63;  //bouton DROITE,          le DC du moteur D est diminué de 10 pendant 1s; pour tourner à droite pendant 1s
-const int PAGE   = 0x1FEC13E;  //bouton PAGE,			       marche avant à Vmini pendant 1000ms puis arret des moteurs
-const int HOME   = 0x1FECE31;  //bouton HOME,			       marche avant à Vmini pendant 200ms puis arret des moteurs
-const int OKOK   = 0x1FEC837;  //bouton OK,			         arret des moteurs, DCG et DCD inchangés
-const int RETOUR = 0x1FEE41B;  //bouton RETOUR,			     mettre DCG et DCD à 800
-const int SOURIS = 0x1FE12ED;  //bouton SOURIS,          envoyer à ESP32CAM une commande activation caméra pendant 10s
-*/
-#if (robot_nb % 2 == 1)
-   #include "telecommande_1.h" 
-#else
-   #include "telecommande_2.h"
-#endif
-
 int DCG; //Duty Cycle du moteur Gauche
 int DCD; //Duty Cycle du moteur Droit
-int DC = 800;
+int DC = 800;  // Duty cycle par défaut
 bool flash = false;
 const int range = 1000;
 const int freq = 1000; // frequence du hacheur
