@@ -31,7 +31,7 @@ Les deux microcontrolleurs sont alimentés en 5V par la même source : 4 piles 1
 
 <p align="center">
   <img src="./RSJ_implantation.png" width="400">
-  <img src="./RSJ_pcb.png" width="360">
+  <img src="./RSJ_pcb.png" width="340">
 <p/>
 
 ## Firmwares pour le D1 mini et pour l'ESP32-cam
