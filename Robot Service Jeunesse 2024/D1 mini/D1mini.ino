@@ -162,7 +162,7 @@ switch(results.value)
   DCD = DC;
   break;
 
-  case SOURIS: Serial.println("SOURIS         activation CAM"); // envoie pendant 10s une commande d'activation camera 
+  case SOURIS: Serial.println("SOURIS         allumage/extinction led ESP32-cam");
     if (!flash){
       digitalWrite(cam, HIGH);          // Allumage
       flash = true;
