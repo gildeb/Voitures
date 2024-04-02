@@ -14,7 +14,7 @@ d'intelligence artificielle.
 
 ## Schema electrique
 <p align="center">
-  <img src="./Schema electrique.png" width="600">
+  <img src="./Schema electrique.png" width="800">
 <p/>
 
 Le circuit électrique utilise deux microcontroleurs : 
