@@ -45,11 +45,12 @@ class OCR:
         #  initialisation socket udp
         self.s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.addr_port = ('192.168.4.1', 10086)      # ESP32-CAM address
-        self.s.settimeout(0.5)
-        self.s.sendto(b'BLACK', self.addr_port)
+        self.s.settimeout(1)
+        self.color = b'BLACK'
 
     def read(self):
         try:
+            self.s.sendto(self.color, self.addr_port)
             buf = self.s.recvfrom(50000)
             raw_img = np.asarray(bytearray(buf[0]), dtype=np.uint8)
             frame = cv2.imdecode(raw_img, cv2.IMREAD_COLOR)
@@ -60,7 +61,6 @@ class OCR:
         except:          # timeout de réception de l'image
             print('no image ', self.count)
             self.count += 1
-            self.s.sendto(b'BLACK', self.addr_port)
             return None, None
 
 ###########################################################################################################
@@ -153,7 +153,7 @@ class MastermindCV(OCR):
         y = 2*self.height
         if self.nb:
             text = "p({})={:5.2f}".format(str(self.nb), self.max_prob)
-            cv2.putText(self.frame, text, (x + 5, y - 5), font, smallsize, BLEU,
+            cv2.putText(self.frame, text, (x + 5, y - 7), font, smallsize, BLEU,
                         thickness2, line_type)
 
     def run(self):
@@ -222,11 +222,14 @@ class MastermindCV(OCR):
         # Mise à jour de la coulur nopixel
         if self.nb:
             if self.max_prob > 0.8:
-                self.s.sendto(b'GREEN', self.addr_port)
+                self.color = b'GREEN'
+                # self.s.sendto(b'GREEN', self.addr_port)
             else:
-                self.s.sendto(b'BLUE', self.addr_port)
+                self.color = b'BLUE'
+                # self.s.sendto(b'BLUE', self.addr_port)
         else:
-            self.s.sendto(b'RED', self.addr_port)
+            self.color = b'RED'
+            # self.s.sendto(b'RED', self.addr_port)
 
     def result(self):
         """ Fin du tour de jeu : analyse la combinaison choisie """
