@@ -9,5 +9,5 @@ Charger ensuite les fichiers _RSJ2024_image_server.py_ et _main.py_ à la racine
 Le serveur d'images est lancé automatiquement au redémarrage.
 
 Sur le PC:
-- se connecter au point d'accès wifi 'ESP32-cam-x' (x=robot_nb entre 1 et 6)
+- se connecter au point d'accès wifi  'ESP32-cam-x' (x=robot_no entre 1 et 6)
 - lancer _Mastermind-Micropython.py_
