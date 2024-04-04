@@ -1,0 +1,12 @@
+const uint64_t ARRET  = 0x807F02FD;  //arrêt des moteurs
+const uint64_t ACCELG = 0x807F18E7;  //bouton VOL+ : accélération moteur gauche
+const uint64_t FREING = 0x807F08F7;  //bouton VOL- : décélération moteur gauche
+const uint64_t AVT1   = 0x807F6897;  //bouton HAUT : marche avant
+const uint64_t ARR1   = 0x807F58A7;  //bouton BAS  : marche arrière
+const uint64_t VIREG  = 0x807F8A75;  //bouton GAUCHE : ralentissement moteur gauche pendant 1s
+const uint64_t VIRED  = 0x807F0AF5;  //bouton DROITE : ralentissement moteur droit pendant 1s
+const uint64_t PAGE   = 0x807F32CD;  //bouton PAGE : marche avant à Vmini pendant 1s puis arret des moteurs
+const uint64_t HOME   = 0x807F8877;  //bouton HOME : marche avant à Vmini pendant 0.2s puis arret des moteurs
+const uint64_t OKOK   = 0x807FC837;  //bouton OK : arret des moteurs
+const uint64_t RETOUR = 0x807F9867;  //bouton RETOUR : remettre DCG et DCD à DC
+const uint64_t SOURIS = 0x807F00FF;  //bouton SOURIS : allumage/extinction led ESP32CAM
