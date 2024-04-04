@@ -43,4 +43,10 @@ Voir les dossiers correspondants
 <p align="center">
   <img src="./telecommande.png" width="600">
 <p/>
+<p align="center">
+  <img src="./telecommandes_1_et_2.png" width="400">
+<p/>
+
+
+
 
