@@ -4,6 +4,7 @@ import cv2
 import random
 import numpy as np
 import easyocr
+from time import perf_counter
 
 ###########################################################################################################
 #    Constantes
@@ -41,26 +42,34 @@ class OCR:
         self.reader  = easyocr.Reader(['fr'])  # Utiliser EasyOCR avec la langue française
         self.width  = image_w
         self.height = image_h
-        self.count = 0
+        # self.count = 1
         #  initialisation socket udp
         self.s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.addr_port = ('192.168.4.1', 10086)      # ESP32-CAM address
         self.s.settimeout(1)
         self.color = b'BLACK'
+        # self.fd = open('/Users/Gilles/Dropbox/Informatique/Anumby/RSJ 2024/ESP32-cam/mastermind.log','w')
+        # self.t = perf_counter()
 
     def read(self):
         try:
+            # self.fd.write('      fin de boucle {:6.3f}\r\n'.format(perf_counter() - self.t))
+            # self.fd.write('image {}\r\n'.format(self.count))
+            # self.t = perf_counter()
             self.s.sendto(self.color, self.addr_port)
             buf = self.s.recvfrom(50000)
+            # self.fd.write('     received {:6.3f}\r\n'.format(perf_counter() - self.t))
+            # self.count += 1
             raw_img = np.asarray(bytearray(buf[0]), dtype=np.uint8)
             frame = cv2.imdecode(raw_img, cv2.IMREAD_COLOR)
+            # self.fd.write('     decoded {:6.3f}\r\n'.format(perf_counter() - self.t))
             res = self.reader.readtext(frame)
-            # self.count += 1
+            # self.fd.write('     processed {:6.3f}\r\n'.format(perf_counter() - self.t))
             # print('image ', self.count)
             return res, frame
         except:          # timeout de réception de l'image
-            print('no image ', self.count)
-            self.count += 1
+            # self.fd.write('     no image {:6.3f}\r\n'.format(perf_counter()-self.t))
+            self.s.sendto(self.color, self.addr_port)
             return None, None
 
 ###########################################################################################################
@@ -168,6 +177,12 @@ class MastermindCV(OCR):
 
             if k == ord('q'):   # quit
                 break
+            elif k == ord('x'):
+                if self.info == prompt:
+                    self.info = '{}-{}-{}-{}'.format(*self.secret)
+                else:
+                    self.info = prompt
+                self.display_info()
 
             if (not self.win):
                 if self.nb:
@@ -190,6 +205,7 @@ class MastermindCV(OCR):
                 if k == 13:            # retour chariot = fin du tour
                     self.result()
 
+        # self.fd.close()
         cv2.destroyAllWindows()
 
     def process_image(self):
