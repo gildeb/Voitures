@@ -80,8 +80,7 @@ camera.quality(10)
 # s.listen(1)
 #
 #   wifi station mode
-sta = WifiConnect('KIWI_11091')
-# sta = WifiConnect('iPhone de Gilles')
+sta = WifiConnect('ssid')
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
