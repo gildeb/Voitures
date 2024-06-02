@@ -17,28 +17,23 @@ from WifiConnect import WifiConnect
 from binascii import b2a_base64
 from car import *
 #
-lock = False
 r = motor(fwdThr=32, bwdThr=32)                  #  right motor
 l = motor(fwd=14, bwd=15, fwdThr=22, bwdThr=22)  #  left motor
 r.stop()
 l.stop()
 #
 def send_image():
-    t = ticks_ms()
+#     print("start sending image: ", ticks_ms() - tim, "ms")
     buf = b2a_base64(camera.capture())
     ws.write(buf)
-    print(ticks_ms() - t, " ms   len: ", len(buf))
+#     print("stop sending image: ", ticks_ms() - tim, " ms   len: ", len(buf))
+#     tim = ticks_ms()
 #
 def notify(s):
-    global lock
-    
-    if lock:
-        print('notify')
-        return
-    lock = True
     msg = ws.read()
     try:
         if (lastcmd := msg.strip(b'ready\n').split(b'ready\n')[-1]) != b'':
+            lastcmd = lastcmd.split(b'\n')[-1]
             ls, rs = lastcmd.split(b';')    # left speed, right speed
             l.setSpeed(int(ls))   # convert bytes to int
             r.setSpeed(int(rs))   # convert bytes to int
@@ -46,7 +41,6 @@ def notify(s):
             send_image()
     except:
         print(msg)
-    lock = False
 
 def serve_page(sock):
     try:
@@ -80,7 +74,8 @@ camera.quality(10)
 # s.listen(1)
 #
 #   wifi station mode
-sta = WifiConnect('ssid')
+sta = WifiConnect('KIWI_11091')
+# sta = WifiConnect('iPhone de Gilles')
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
